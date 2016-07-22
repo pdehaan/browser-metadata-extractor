@@ -1,0 +1,22 @@
+{
+  "name": "browser-metadata-extractor",
+  "description": "Extract metadata from web pages in-browser.",
+  "version": "1.0.0",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mozilla/browser-metadata-extractor.git"
+  },
+  "dependencies": {
+    "page-metadata-parser": "^0.2.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
+  },
+  "scripts": {
+    "build-ios": "browserify src/extract.js -o bin/extract.ios.js -t [ babelify --global true --compact false --presets es2015 ]",
+    "build-android": "browserify src/extract.js -o bin/extract.android.js"
+  }
+}
