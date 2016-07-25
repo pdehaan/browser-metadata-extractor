@@ -16,7 +16,7 @@
     "browserify": "^13.0.1"
   },
   "scripts": {
-    "build-ios": "browserify src/extract.js -o bin/extract.ios.js -t [ babelify --global true --compact false --presets es2015 ]",
-    "build-android": "browserify src/extract.js -o bin/extract.android.js"
+    "build-ios": "browserify src/extract.js -o out/extract.ios.js -t [ babelify --global true --compact false --presets es2015 ]",
+    "build-android": "browserify src/extract.js -o out/extract.android.js"
   }
 }
